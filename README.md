@@ -46,7 +46,7 @@ Step 2 - Creating a Voting Smart Contract
 npm install solc
 ```
 
-Replace your aadhaar no and phone number for techdot/ui/js/app.js#L39
+Replace your aadhaar no and phone number at techdot/ui/js/app.js#L39
 
 Step 3 - Testing in node console
 
