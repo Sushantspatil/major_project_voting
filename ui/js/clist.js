@@ -114,7 +114,7 @@ $(document).ready(function() {
 		];
 		VotingContract = new web3.eth.Contract(abi);
 		// VotingContract = web3.eth.contract(abi);
-		contractInstance = new web3.eth.Contract(abi, '0x6aaaf52c29023313ca727c86a447d89b9e120a1d');
+		contractInstance = new web3.eth.Contract(abi, '0x4313b99a6784749a0fad27ba34f12491ccf29bcb');
 		const connectButton = document.getElementById("connectButton");
 		const walletID = document.getElementById("walletID");
 
@@ -183,10 +183,10 @@ function getWalletID() {
   }
 
 // Voting function
-function voteForCandidate(candidateName,account) {
+function voteForCandidate(candidateName) {
     var candidateNameBytes32 = toBytes32(candidateName);
 
-    contractInstance.methods.voteForCandidate(candidateNameBytes32).send({from:account}, function(error, result) {
+    contractInstance.methods.voteForCandidate(candidateNameBytes32).send({from:'0x7b6609aA41B7A95ac4955dc89DD155a79a71E009'}, function(error, result) {
         if (error) {
             console.error("Error:", error);
         } else {
@@ -199,14 +199,15 @@ function voteForCandidate(candidateName,account) {
 }
 
 // Event listeners for voting buttons
-$('#vote1').click(async function(){
-	try{
-	const account = await getWalletID();
+$('#vote1').click(function(){
+	voteForCandidate('Sanat');
+	//try{
+	// const account = await getWalletID();
+	// console.log('ACCOUNT -> ', account);
 	// walletID.innerHTML = `Wallet connected: ${account}`;
-    voteForCandidate('Sanat',account);}
-	catch(error){
-		console.error("Error retrieving wallet ID:", error);
-	}
+	// catch(error){
+	// 	console.error("Error retrieving wallet ID:", error);
+	// }
 });
 
 $('#vote2').click(function(){
