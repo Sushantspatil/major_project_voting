@@ -114,7 +114,7 @@ $(document).ready(function() {
 		];
 		VotingContract = new web3.eth.Contract(abi);
 		// VotingContract = web3.eth.contract(abi);
-		contractInstance = new web3.eth.Contract(abi, '0x4313b99a6784749a0fad27ba34f12491ccf29bcb');
+		contractInstance = new web3.eth.Contract(abi, '0x7ac12a4213f64a795dcf066563270f43b81c4520');
 		const connectButton = document.getElementById("connectButton");
 		const walletID = document.getElementById("walletID");
 
@@ -186,7 +186,7 @@ function getWalletID() {
 function voteForCandidate(candidateName) {
     var candidateNameBytes32 = toBytes32(candidateName);
 
-    contractInstance.methods.voteForCandidate(candidateNameBytes32).send({from:'0x7b6609aA41B7A95ac4955dc89DD155a79a71E009'}, function(error, result) {
+    contractInstance.methods.voteForCandidate(candidateNameBytes32).send({from:'0x99900947d91cb478D55380eA05BeC6d3A1C111F8'}, function(error, result) {
         if (error) {
             console.error("Error:", error);
         } else {
@@ -200,7 +200,7 @@ function voteForCandidate(candidateName) {
 
 // Event listeners for voting buttons
 $('#vote1').click(function(){
-	voteForCandidate('Sanat');
+	voteForCandidate('Sushant');
 	//try{
 	// const account = await getWalletID();
 	// console.log('ACCOUNT -> ', account);
@@ -211,15 +211,15 @@ $('#vote1').click(function(){
 });
 
 $('#vote2').click(function(){
-    voteForCandidate('Aniket');
+    voteForCandidate('Jagruti');
 });
 
 $('#vote3').click(function(){
-    voteForCandidate('Mandar');
+    voteForCandidate('Sakshi');
 });
 
 $('#vote4').click(function(){
-    voteForCandidate('Akshay');
+    voteForCandidate('Amol');
 });
 
 	// 	// ACTUAL DOWN FROM HERE
