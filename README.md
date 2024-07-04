@@ -15,7 +15,7 @@ Aadhaar-Based voting system using blockchain technology
 
 Clone Project
 ```
-https://github.com/Sushantspatil/major_project_voting.git && cd techdot
+https://github.com/Sushantspatil/major_project_voting.git && cd major_project_voting
 ```
 Install Dependencies
 ```
@@ -46,7 +46,7 @@ Step 2 - Creating a Voting Smart Contract
 npm install solc
 ```
 
-Replace your aadhaar no and phone number at techdot/ui/js/app.js#L39
+Replace your aadhaar no and phone number at major_project_voting/ui/js/app.js#L39
 
 Step 3 - Testing in node console
 
@@ -95,7 +95,7 @@ $ ganache-cli
 ```
 Paste this address to 
 ui/js/clist.js line 17
-techdot/ui/js/clist.js#L17
+major_project_voting/ui/js/clist.js#L17
 
 
 ### Purpose of the test
