@@ -15,7 +15,7 @@ Aadhaar-Based voting system using blockchain technology
 
 Clone Project
 ```
-git clone git@github.com:sanattaori/techdot.git && cd techdot
+https://github.com/Sushantspatil/major_project_voting.git && cd techdot
 ```
 Install Dependencies
 ```
@@ -72,15 +72,15 @@ The interface of the contract (called abi) tells the contract user what methods 
 > abiDefinition = JSON.parse(compiledCode.contracts[':Voting'].interface)
 > VotingContract = web3.eth.contract(abiDefinition)
 > byteCode = compiledCode.contracts[':Voting'].bytecode
-> deployedContract = VotingContract.new(['Sanat','Aniket','Mandar','Akshay'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
+> deployedContract = VotingContract.new(['Sushant','Jagruti','Sakshi','Amol'],{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
 > deployedContract.address
 > contractInstance = VotingContract.at(deployedContract.address)
-> contractInstance.totalVotesFor.call('Sanat').toLocaleString()
+> contractInstance.totalVotesFor.call('Sushant').toLocaleString()
 ```
 
 Step 4 - Interacting with the Contract via the Nodejs Console
 ```
-> contractInstance.totalVotesFor.call('Sanat').toLocaleString()
+> contractInstance.totalVotesFor.call('Sushant').toLocaleString()
 '2'
 ```
 
